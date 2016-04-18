@@ -1,0 +1,2 @@
+Use the .xcworkspace file as this contains both our project and the CocoaPods projects
+
