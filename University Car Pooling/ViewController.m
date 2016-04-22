@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "OnboardingViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import "SWRevealViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -57,6 +59,10 @@
     [self presentViewController:onboardingVC animated:YES completion:nil];
     
 
+    _barButton.target = self.revealViewController;
+    _barButton.action = @selector(revealToggle:);
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (void)handleOnboardingCompletion {
