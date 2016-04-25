@@ -22,12 +22,8 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults boolForKey:@"firstRun"] == false) {
-        
-    } else {
-        
-    }
+    
+    
     return YES;
 }
 

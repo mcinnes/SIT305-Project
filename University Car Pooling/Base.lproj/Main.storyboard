@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
@@ -112,7 +112,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="khw-m3-JgM" kind="custom" customClass="SWRevealViewControllerSegue" id="jbo-1W-YGR"/>
+                                    <segue destination="TUU-N0-f4b" kind="show" id="5Ij-2Z-4fY"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fifth" textLabel="a5z-YW-XFo" style="IBUITableViewCellStyleDefault" id="5jC-bR-cwv">
@@ -179,17 +179,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="TUU-N0-f4b" kind="relationship" relationship="rootViewController" id="Kk0-fH-QKo"/>
+                        <segue destination="aMh-QD-RXs" kind="relationship" relationship="rootViewController" id="RF3-Zq-CZo"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzh-fb-iWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2095" y="849"/>
         </scene>
-        <!--View Controller-->
+        <!--Trip View Controller-->
         <scene sceneID="KHv-uA-V6p">
             <objects>
-                <viewController id="TUU-N0-f4b" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="TUU-N0-f4b" customClass="TripViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qfd-uA-5QT"/>
                         <viewControllerLayoutGuide type="bottom" id="eVE-EY-02P"/>
@@ -197,6 +197,11 @@
                     <view key="view" contentMode="scaleToFill" id="Z3q-Yr-DYN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gyg-o4-uPH">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="iIu-f1-o9w">
@@ -208,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KO-ko-BQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2816" y="849"/>
+            <point key="canvasLocation" x="3668" y="849"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QPW-jC-OK3">
@@ -308,6 +313,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="vOE-fP-IJR"/>
         <segue reference="pH1-69-tg0"/>
     </inferredMetricsTieBreakers>
 </document>

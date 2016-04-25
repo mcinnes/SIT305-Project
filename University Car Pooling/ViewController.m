@@ -26,8 +26,10 @@
     }];
     
     OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"Allow Location Services" body:@"We use location services to show your location during a ride, and when finding rides." image:[UIImage imageNamed:@"icon"] buttonText:@"Allow Location Services" action:^{
+        
         [[LocationService sharedInstance] requestUse];
         secondPage.movesToNextViewController = YES;
+        
 
     }];
     

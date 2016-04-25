@@ -68,7 +68,7 @@ static CLLocationSpeed const kMpsToMph = 2.2369;
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
-    self.locationManager.activityType = CLActivityTypeFitness;
+    self.locationManager.activityType = CLActivityTypeAutomotiveNavigation;
     
     [self resetMetrics];
     

@@ -7,6 +7,13 @@
 //
 
 #import "LocationService.h"
+static CGFloat const kRegionPaddingMultiplier = 1.33;
+
+@interface LocationService () <CLLocationManagerDelegate>
+
+
+
+@end
 
 @implementation LocationService
 
@@ -24,14 +31,19 @@
     self = [super init];
     if(self != nil) {
         self.locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
         self.locationManager.distanceFilter = 100; // meters
+        self.locationManager.activityType = CLActivityTypeAutomotiveNavigation;
         self.locationManager.delegate = self;
     }
     return self;
 }
 -(void)requestUse{
     [self.locationManager requestWhenInUseAuthorization];
+}
+
+-(void)beginTracking{
+    
 }
 - (void)startUpdatingLocation
 {
@@ -45,13 +57,40 @@
     NSLog(@"Location service failed with error %@", error);
 }
 
-- (void)locationManager:(CLLocationManager *)manager
-     didUpdateLocations:(NSArray*)locations
-{
-    CLLocation *location = [locations lastObject];
-    NSLog(@"Latitude %+.6f, Longitude %+.6f\n",
-          location.coordinate.latitude,
-          location.coordinate.longitude);
-    self.currentLocation = location;
+
+
+#pragma mark
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    [self.routeLocations addObjectsFromArray:locations];
+    
+    for (CLLocation *location in locations) {
+        [self handleLocationUpdate:location];
+    }
 }
+- (void)handleLocationUpdate:(CLLocation *)location {
+    // Coordinates
+    //
+    CLLocationCoordinate2D coord = location.coordinate;
+    CLLocationDegrees latitude = coord.latitude;
+    CLLocationDegrees longitude = coord.longitude;
+    
+    if (latitude > self.maximumLatitude) {
+        self.maximumLatitude = latitude;
+    }
+    
+    if (latitude < self.minimumLatitude) {
+        self.minimumLatitude = latitude;
+    }
+    
+    if (longitude < self.minimumLongitude) {
+        self.minimumLongitude = longitude;
+    }
+    
+    if (longitude > self.maximumLongitude) {
+        self.maximumLongitude = longitude;
+    }
+    
+}
+
+
 @end

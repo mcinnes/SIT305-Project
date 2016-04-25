@@ -8,14 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "Tracker.h"
-@interface TripViewController : UIViewController <TrackerDelegate, MKMapViewDelegate> {
+#import "LocationService.h"
+
+@interface TripViewController : UIViewController <MKMapViewDelegate> {
 
 }
 
-@property (nonatomic, strong) MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
-@property (nonatomic, strong) Tracker *tracker;
+@property (nonatomic, strong) LocationService *locationService;
+
+@property (nonatomic, strong, readonly) NSMutableArray *routeLocations;
+
+@property (nonatomic, strong, readonly) MKPolyline *routePolyline;
+
+@property (nonatomic, readonly) MKCoordinateRegion routeRegion;
 
 
 @end
