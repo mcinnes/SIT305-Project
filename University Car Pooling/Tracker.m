@@ -212,9 +212,9 @@ static CLLocationSpeed const kMpsToMph = 2.2369;
     
     // Delegate
     //
-    if ([self.delegate respondsToSelector:@selector(followerDidUpdate:)]) {
-        [self.delegate followerDidUpdate:self];
-    }
+ //   if ([self.delegate respondsToSelector:@selector(followerDidUpdate:)]) {
+   //     [self.delegate followerDidUpdate:self];
+    //}
 }
 
 - (void)createRegionForRoute {

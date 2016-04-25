@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "OnboardingViewController.h"
-#import <CoreLocation/CoreLocation.h>
+#import "LocationService.h"
 #import "SWRevealViewController.h"
 
 @interface ViewController ()
@@ -19,16 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CLLocationManager *locationManager;
-    locationManager = [[CLLocationManager alloc] init];
+    
     
     OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"Page Title" body:@"Page body goes here." image:[UIImage imageNamed:@"icon"] buttonText:@"Next" action:^{
         // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
     }];
     
     OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"Allow Location Services" body:@"We use location services to show your location during a ride, and when finding rides." image:[UIImage imageNamed:@"icon"] buttonText:@"Allow Location Services" action:^{
-        
-        [locationManager requestWhenInUseAuthorization];
+        [[LocationService sharedInstance] requestUse];
         secondPage.movesToNextViewController = YES;
 
     }];
