@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5DD867969608CDC1B93A44CF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A93890B5213E60DC8986EC /* libPods.a */; };
-		C906655A1CCB1795004817D1 /* Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = C90665591CCB1795004817D1 /* Tracker.m */; };
 		C906655D1CCB17A0004817D1 /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906655C1CCB17A0004817D1 /* TripViewController.m */; };
 		C90665611CCBABE9004817D1 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = C90665601CCBABE9004817D1 /* LocationService.m */; };
 		C982CFD41CC4FB3300658111 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C982CFD31CC4FB3300658111 /* MapKit.framework */; };
 		C982CFD61CC4FB7400658111 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C982CFD51CC4FB7400658111 /* CoreLocation.framework */; };
+		C9F36EF91CCF11A500EFFEA8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F36EF81CCF11A500EFFEA8 /* LoginViewController.m */; };
 		C9FE43BE1CBFA8F6000F4A1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE43BD1CBFA8F6000F4A1B /* main.m */; };
 		C9FE43C11CBFA8F6000F4A1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE43C01CBFA8F6000F4A1B /* AppDelegate.m */; };
 		C9FE43C41CBFA8F6000F4A1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE43C31CBFA8F6000F4A1B /* ViewController.m */; };
@@ -28,14 +28,14 @@
 		27E2A7DF5808018B34C94742 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		95A93890B5213E60DC8986EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A639D84A1EB6AC4FEC33716F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		C90665581CCB1795004817D1 /* Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
-		C90665591CCB1795004817D1 /* Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tracker.m; sourceTree = "<group>"; };
 		C906655B1CCB17A0004817D1 /* TripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripViewController.h; sourceTree = "<group>"; };
 		C906655C1CCB17A0004817D1 /* TripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripViewController.m; sourceTree = "<group>"; };
 		C906655F1CCBABE9004817D1 /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationService.h; path = Classes/LocationService.h; sourceTree = "<group>"; };
 		C90665601CCBABE9004817D1 /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationService.m; path = Classes/LocationService.m; sourceTree = "<group>"; };
 		C982CFD31CC4FB3300658111 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C982CFD51CC4FB7400658111 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C9F36EF71CCF11A500EFFEA8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C9F36EF81CCF11A500EFFEA8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C9FE43B91CBFA8F6000F4A1B /* University Car Pooling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "University Car Pooling.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FE43BD1CBFA8F6000F4A1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9FE43BF1CBFA8F6000F4A1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,8 +90,6 @@
 		C906655E1CCB17B9004817D1 /* TripView */ = {
 			isa = PBXGroup;
 			children = (
-				C90665581CCB1795004817D1 /* Tracker.h */,
-				C90665591CCB1795004817D1 /* Tracker.m */,
 				C906655B1CCB17A0004817D1 /* TripViewController.h */,
 				C906655C1CCB17A0004817D1 /* TripViewController.m */,
 			);
@@ -119,6 +117,8 @@
 		C9FE43BB1CBFA8F6000F4A1B /* University Car Pooling */ = {
 			isa = PBXGroup;
 			children = (
+				C9F36EF71CCF11A500EFFEA8 /* LoginViewController.h */,
+				C9F36EF81CCF11A500EFFEA8 /* LoginViewController.m */,
 				C9FE43BF1CBFA8F6000F4A1B /* AppDelegate.h */,
 				C9FE43C01CBFA8F6000F4A1B /* AppDelegate.m */,
 				C906655E1CCB17B9004817D1 /* TripView */,
@@ -276,9 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9FE43C41CBFA8F6000F4A1B /* ViewController.m in Sources */,
-				C906655A1CCB1795004817D1 /* Tracker.m in Sources */,
 				EB46445C1CC8B002006C77EC /* SWRevealViewController.m in Sources */,
 				EB46445F1CC8B4EB006C77EC /* NavigationTableViewController.m in Sources */,
+				C9F36EF91CCF11A500EFFEA8 /* LoginViewController.m in Sources */,
 				C906655D1CCB17A0004817D1 /* TripViewController.m in Sources */,
 				C9FE43C11CBFA8F6000F4A1B /* AppDelegate.m in Sources */,
 				C90665611CCBABE9004817D1 /* LocationService.m in Sources */,

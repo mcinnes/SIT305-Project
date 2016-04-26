@@ -7,7 +7,6 @@
 //
 
 #import "LocationService.h"
-static CGFloat const kRegionPaddingMultiplier = 1.33;
 
 @interface LocationService () <CLLocationManagerDelegate>
 
