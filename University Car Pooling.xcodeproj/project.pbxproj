@@ -12,6 +12,11 @@
 		C90665611CCBABE9004817D1 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = C90665601CCBABE9004817D1 /* LocationService.m */; };
 		C982CFD41CC4FB3300658111 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C982CFD31CC4FB3300658111 /* MapKit.framework */; };
 		C982CFD61CC4FB7400658111 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C982CFD51CC4FB7400658111 /* CoreLocation.framework */; };
+		C9DBF3C91CCF995500D3A952 /* RequestedRidesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBF3C81CCF995500D3A952 /* RequestedRidesViewController.m */; };
+		C9DBF3CC1CCF9D1900D3A952 /* RideInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBF3CB1CCF9D1900D3A952 /* RideInfoViewController.m */; };
+		C9DBF3D01CD06D1800D3A952 /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBF3CE1CD06D1800D3A952 /* SimpleTableCell.m */; };
+		C9DBF3D11CD06D1800D3A952 /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DBF3CF1CD06D1800D3A952 /* SimpleTableCell.xib */; };
+		C9DBF3D51CD0966C00D3A952 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBF3D41CD0966C00D3A952 /* Annotation.m */; };
 		C9F36EF91CCF11A500EFFEA8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F36EF81CCF11A500EFFEA8 /* LoginViewController.m */; };
 		C9FE43BE1CBFA8F6000F4A1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE43BD1CBFA8F6000F4A1B /* main.m */; };
 		C9FE43C11CBFA8F6000F4A1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE43C01CBFA8F6000F4A1B /* AppDelegate.m */; };
@@ -34,6 +39,15 @@
 		C90665601CCBABE9004817D1 /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationService.m; path = Classes/LocationService.m; sourceTree = "<group>"; };
 		C982CFD31CC4FB3300658111 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C982CFD51CC4FB7400658111 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C9DBF3C71CCF995500D3A952 /* RequestedRidesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestedRidesViewController.h; path = Classes/ViewControllers/RequestedRidesViewController.h; sourceTree = "<group>"; };
+		C9DBF3C81CCF995500D3A952 /* RequestedRidesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestedRidesViewController.m; path = Classes/ViewControllers/RequestedRidesViewController.m; sourceTree = "<group>"; };
+		C9DBF3CA1CCF9D1900D3A952 /* RideInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RideInfoViewController.h; path = Classes/ViewControllers/RideInfoViewController.h; sourceTree = "<group>"; };
+		C9DBF3CB1CCF9D1900D3A952 /* RideInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RideInfoViewController.m; path = Classes/ViewControllers/RideInfoViewController.m; sourceTree = "<group>"; };
+		C9DBF3CD1CD06D1800D3A952 /* SimpleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
+		C9DBF3CE1CD06D1800D3A952 /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
+		C9DBF3CF1CD06D1800D3A952 /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
+		C9DBF3D31CD0966C00D3A952 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		C9DBF3D41CD0966C00D3A952 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		C9F36EF71CCF11A500EFFEA8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C9F36EF81CCF11A500EFFEA8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C9FE43B91CBFA8F6000F4A1B /* University Car Pooling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "University Car Pooling.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,8 +131,17 @@
 		C9FE43BB1CBFA8F6000F4A1B /* University Car Pooling */ = {
 			isa = PBXGroup;
 			children = (
+				C9DBF3CD1CD06D1800D3A952 /* SimpleTableCell.h */,
+				C9DBF3CE1CD06D1800D3A952 /* SimpleTableCell.m */,
+				C9DBF3CF1CD06D1800D3A952 /* SimpleTableCell.xib */,
 				C9F36EF71CCF11A500EFFEA8 /* LoginViewController.h */,
 				C9F36EF81CCF11A500EFFEA8 /* LoginViewController.m */,
+				C9DBF3C71CCF995500D3A952 /* RequestedRidesViewController.h */,
+				C9DBF3C81CCF995500D3A952 /* RequestedRidesViewController.m */,
+				C9DBF3CA1CCF9D1900D3A952 /* RideInfoViewController.h */,
+				C9DBF3CB1CCF9D1900D3A952 /* RideInfoViewController.m */,
+				C9DBF3D31CD0966C00D3A952 /* Annotation.h */,
+				C9DBF3D41CD0966C00D3A952 /* Annotation.m */,
 				C9FE43BF1CBFA8F6000F4A1B /* AppDelegate.h */,
 				C9FE43C01CBFA8F6000F4A1B /* AppDelegate.m */,
 				C906655E1CCB17B9004817D1 /* TripView */,
@@ -214,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4644591CC8AE67006C77EC /* backgroundHolden.png in Resources */,
+				C9DBF3D11CD06D1800D3A952 /* SimpleTableCell.xib in Resources */,
 				C9FE43CC1CBFA8F6000F4A1B /* LaunchScreen.storyboard in Resources */,
 				C9FE43C91CBFA8F6000F4A1B /* Assets.xcassets in Resources */,
 				C9FE43C71CBFA8F6000F4A1B /* Main.storyboard in Resources */,
@@ -275,13 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DBF3CC1CCF9D1900D3A952 /* RideInfoViewController.m in Sources */,
 				C9FE43C41CBFA8F6000F4A1B /* ViewController.m in Sources */,
 				EB46445C1CC8B002006C77EC /* SWRevealViewController.m in Sources */,
 				EB46445F1CC8B4EB006C77EC /* NavigationTableViewController.m in Sources */,
 				C9F36EF91CCF11A500EFFEA8 /* LoginViewController.m in Sources */,
 				C906655D1CCB17A0004817D1 /* TripViewController.m in Sources */,
+				C9DBF3D51CD0966C00D3A952 /* Annotation.m in Sources */,
+				C9DBF3D01CD06D1800D3A952 /* SimpleTableCell.m in Sources */,
 				C9FE43C11CBFA8F6000F4A1B /* AppDelegate.m in Sources */,
 				C90665611CCBABE9004817D1 /* LocationService.m in Sources */,
+				C9DBF3C91CCF995500D3A952 /* RequestedRidesViewController.m in Sources */,
 				C9FE43BE1CBFA8F6000F4A1B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

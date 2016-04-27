@@ -185,7 +185,10 @@ UIScrollViewDelegate>
 - (void)processFieldEntries {
     // Get the username text, store it in the app delegate for now
     NSString *username = self.usernameField.text;
+    NSLog(@"%@", username);
     NSString *password = self.passwordField.text;
+    NSLog(@"%@", password);
+
     NSString *noUsernameText = @"username";
     NSString *noPasswordText = @"password";
     NSString *errorText = @"No ";
@@ -242,6 +245,8 @@ UIScrollViewDelegate>
         if (user) {
             [self.delegate loginViewControllerDidLogin:self];
             NSLog(@"logged in");
+            [self dismissViewControllerAnimated:TRUE completion:nil];
+            
         } else {
             // Didn't get a user.
             NSLog(@"%s didn't get a user!", __PRETTY_FUNCTION__);
