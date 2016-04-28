@@ -6,7 +6,7 @@
 //  Copyright © 2016 Matt McInnes. All rights reserved.
 //
 
-#import "RideInfoViewController.h"
+/*#import "RideInfoViewController.h"
 
 @interface RideInfoViewController ()
 
@@ -42,4 +42,4 @@
 }
 
 
-@end
+@end*/

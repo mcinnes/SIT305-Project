@@ -27,6 +27,7 @@
 		EB4644591CC8AE67006C77EC /* backgroundHolden.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4644581CC8AE67006C77EC /* backgroundHolden.png */; };
 		EB46445C1CC8B002006C77EC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB46445B1CC8B002006C77EC /* SWRevealViewController.m */; };
 		EB46445F1CC8B4EB006C77EC /* NavigationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB46445E1CC8B4EB006C77EC /* NavigationTableViewController.m */; };
+		EBF40D971CD1E69A00A64D8B /* SplashScreen568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF40D961CD1E69A00A64D8B /* SplashScreen568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		EB46445B1CC8B002006C77EC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EB46445D1CC8B4EB006C77EC /* NavigationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTableViewController.h; sourceTree = "<group>"; };
 		EB46445E1CC8B4EB006C77EC /* NavigationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTableViewController.m; sourceTree = "<group>"; };
+		EBF40D961CD1E69A00A64D8B /* SplashScreen568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		C9FE43B01CBFA8F6000F4A1B = {
 			isa = PBXGroup;
 			children = (
+				EBF40D961CD1E69A00A64D8B /* SplashScreen568h@2x.png */,
 				C9FE43BB1CBFA8F6000F4A1B /* University Car Pooling */,
 				C9FE43BA1CBFA8F6000F4A1B /* Products */,
 				578650F741CAE5B16C996DAC /* Pods */,
@@ -240,6 +243,7 @@
 				C9DBF3D11CD06D1800D3A952 /* SimpleTableCell.xib in Resources */,
 				C9FE43CC1CBFA8F6000F4A1B /* LaunchScreen.storyboard in Resources */,
 				C9FE43C91CBFA8F6000F4A1B /* Assets.xcassets in Resources */,
+				EBF40D971CD1E69A00A64D8B /* SplashScreen568h@2x.png in Resources */,
 				C9FE43C71CBFA8F6000F4A1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

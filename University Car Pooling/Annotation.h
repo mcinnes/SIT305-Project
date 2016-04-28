@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@implementation Annotation
+@implementation Annotation : NSObject
 
 #pragma mark -
 #pragma mark Memory management
 
 - (void)dealloc {
-    [self setTitle:nil];
-    [self setSubtitle:nil];
+    /*[self setTitle:nil];
+    [self setSubtitle:nil];*/
     
 }
 
