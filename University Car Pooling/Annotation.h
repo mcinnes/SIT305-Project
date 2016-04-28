@@ -14,8 +14,8 @@
 #pragma mark Memory management
 
 - (void)dealloc {
-    /*[self setTitle:nil];
-    [self setSubtitle:nil];*/
+    [self setTitle:nil];
+    [self setSubtitle:nil];
     
 }
 

@@ -9,7 +9,7 @@
 #import "Annotation.h"
 #import <MapKit/MapKit.h>
 
-/*@interface Annotation : NSObject <MKAnnotation> {
+@interface Annotation : NSObject <MKAnnotation> {
     NSString *_title;
     NSString *_subtitle;
     
@@ -20,4 +20,4 @@
 - (void)setTitle:(NSString *)title;
 - (void)setSubtitle:(NSString *)subtitle;
 
-@end*/
+@end
