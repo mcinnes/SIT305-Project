@@ -28,6 +28,9 @@
 		EB46445C1CC8B002006C77EC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB46445B1CC8B002006C77EC /* SWRevealViewController.m */; };
 		EB46445F1CC8B4EB006C77EC /* NavigationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB46445E1CC8B4EB006C77EC /* NavigationTableViewController.m */; };
 		EBF40D971CD1E69A00A64D8B /* SplashScreen568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF40D961CD1E69A00A64D8B /* SplashScreen568h@2x.png */; };
+		EBF40DA31CD424EB00A64D8B /* background-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF40DA21CD424EB00A64D8B /* background-568h@2x.png */; };
+		EBF40DA61CD4272E00A64D8B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF40DA51CD4272E00A64D8B /* RegisterViewController.m */; };
+		EBF40DA91CD4273800A64D8B /* DriverRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF40DA81CD4273800A64D8B /* DriverRegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,11 @@
 		EB46445D1CC8B4EB006C77EC /* NavigationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTableViewController.h; sourceTree = "<group>"; };
 		EB46445E1CC8B4EB006C77EC /* NavigationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTableViewController.m; sourceTree = "<group>"; };
 		EBF40D961CD1E69A00A64D8B /* SplashScreen568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen568h@2x.png"; sourceTree = "<group>"; };
+		EBF40DA21CD424EB00A64D8B /* background-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-568h@2x.png"; sourceTree = "<group>"; };
+		EBF40DA41CD4272E00A64D8B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		EBF40DA51CD4272E00A64D8B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		EBF40DA71CD4273800A64D8B /* DriverRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverRegisterViewController.h; sourceTree = "<group>"; };
+		EBF40DA81CD4273800A64D8B /* DriverRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverRegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 		C9FE43B01CBFA8F6000F4A1B = {
 			isa = PBXGroup;
 			children = (
+				EBF40DA21CD424EB00A64D8B /* background-568h@2x.png */,
 				EBF40D961CD1E69A00A64D8B /* SplashScreen568h@2x.png */,
 				C9FE43BB1CBFA8F6000F4A1B /* University Car Pooling */,
 				C9FE43BA1CBFA8F6000F4A1B /* Products */,
@@ -153,6 +162,10 @@
 				C906655F1CCBABE9004817D1 /* LocationService.h */,
 				C90665601CCBABE9004817D1 /* LocationService.m */,
 				C9FE43C51CBFA8F6000F4A1B /* Main.storyboard */,
+				EBF40DA41CD4272E00A64D8B /* RegisterViewController.h */,
+				EBF40DA51CD4272E00A64D8B /* RegisterViewController.m */,
+				EBF40DA71CD4273800A64D8B /* DriverRegisterViewController.h */,
+				EBF40DA81CD4273800A64D8B /* DriverRegisterViewController.m */,
 				EB46445D1CC8B4EB006C77EC /* NavigationTableViewController.h */,
 				EB46445E1CC8B4EB006C77EC /* NavigationTableViewController.m */,
 				C9FE43C81CBFA8F6000F4A1B /* Assets.xcassets */,
@@ -239,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF40DA31CD424EB00A64D8B /* background-568h@2x.png in Resources */,
 				EB4644591CC8AE67006C77EC /* backgroundHolden.png in Resources */,
 				C9DBF3D11CD06D1800D3A952 /* SimpleTableCell.xib in Resources */,
 				C9FE43CC1CBFA8F6000F4A1B /* LaunchScreen.storyboard in Resources */,
@@ -304,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9DBF3CC1CCF9D1900D3A952 /* RideInfoViewController.m in Sources */,
+				EBF40DA91CD4273800A64D8B /* DriverRegisterViewController.m in Sources */,
 				C9FE43C41CBFA8F6000F4A1B /* ViewController.m in Sources */,
 				EB46445C1CC8B002006C77EC /* SWRevealViewController.m in Sources */,
 				EB46445F1CC8B4EB006C77EC /* NavigationTableViewController.m in Sources */,
@@ -312,6 +327,7 @@
 				C9DBF3D51CD0966C00D3A952 /* Annotation.m in Sources */,
 				C9DBF3D01CD06D1800D3A952 /* SimpleTableCell.m in Sources */,
 				C9FE43C11CBFA8F6000F4A1B /* AppDelegate.m in Sources */,
+				EBF40DA61CD4272E00A64D8B /* RegisterViewController.m in Sources */,
 				C90665611CCBABE9004817D1 /* LocationService.m in Sources */,
 				C9DBF3C91CCF995500D3A952 /* RequestedRidesViewController.m in Sources */,
 				C9FE43BE1CBFA8F6000F4A1B /* main.m in Sources */,
