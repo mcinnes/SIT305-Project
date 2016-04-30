@@ -32,6 +32,10 @@
 		EBF40DA91CD4273800A64D8B /* DriverRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF40DA81CD4273800A64D8B /* DriverRegisterViewController.m */; };
 		EBF40DAB1CD4281500A64D8B /* background-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF40DAA1CD4281500A64D8B /* background-568h@2x.png */; };
 		EBF40DAD1CD4416600A64D8B /* background-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF40DAC1CD4416600A64D8B /* background-clear.png */; };
+		EBF40DB31CD44A7D00A64D8B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF40DB21CD44A7D00A64D8B /* Icon@2x.png */; };
+		EBF40DB51CD44C9E00A64D8B /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF40DB41CD44C9E00A64D8B /* iTunesArtwork@2x.png */; };
+		EBF40DB81CD44DBE00A64D8B /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF40DB71CD44DBE00A64D8B /* AboutViewController.m */; };
+		EBF40DBB1CD44E0A00A64D8B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF40DBA1CD44E0A00A64D8B /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +81,12 @@
 		EBF40DA81CD4273800A64D8B /* DriverRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverRegisterViewController.m; sourceTree = "<group>"; };
 		EBF40DAA1CD4281500A64D8B /* background-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-568h@2x.png"; sourceTree = "<group>"; };
 		EBF40DAC1CD4416600A64D8B /* background-clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-clear.png"; sourceTree = "<group>"; };
+		EBF40DB21CD44A7D00A64D8B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		EBF40DB41CD44C9E00A64D8B /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		EBF40DB61CD44DBE00A64D8B /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		EBF40DB71CD44DBE00A64D8B /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		EBF40DB91CD44E0A00A64D8B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		EBF40DBA1CD44E0A00A64D8B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,8 @@
 		C9FE43B01CBFA8F6000F4A1B = {
 			isa = PBXGroup;
 			children = (
+				EBF40DB41CD44C9E00A64D8B /* iTunesArtwork@2x.png */,
+				EBF40DB21CD44A7D00A64D8B /* Icon@2x.png */,
 				EBF40DAC1CD4416600A64D8B /* background-clear.png */,
 				EBF40DAA1CD4281500A64D8B /* background-568h@2x.png */,
 				EBF40D961CD1E69A00A64D8B /* SplashScreen568h@2x.png */,
@@ -165,6 +177,10 @@
 				C906655F1CCBABE9004817D1 /* LocationService.h */,
 				C90665601CCBABE9004817D1 /* LocationService.m */,
 				C9FE43C51CBFA8F6000F4A1B /* Main.storyboard */,
+				EBF40DB91CD44E0A00A64D8B /* SettingsViewController.h */,
+				EBF40DBA1CD44E0A00A64D8B /* SettingsViewController.m */,
+				EBF40DB61CD44DBE00A64D8B /* AboutViewController.h */,
+				EBF40DB71CD44DBE00A64D8B /* AboutViewController.m */,
 				EBF40DA41CD4272E00A64D8B /* RegisterViewController.h */,
 				EBF40DA51CD4272E00A64D8B /* RegisterViewController.m */,
 				EBF40DA71CD4273800A64D8B /* DriverRegisterViewController.h */,
@@ -256,6 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBF40DAB1CD4281500A64D8B /* background-568h@2x.png in Resources */,
+				EBF40DB51CD44C9E00A64D8B /* iTunesArtwork@2x.png in Resources */,
+				EBF40DB31CD44A7D00A64D8B /* Icon@2x.png in Resources */,
 				EB4644591CC8AE67006C77EC /* backgroundHolden.png in Resources */,
 				C9DBF3D11CD06D1800D3A952 /* SimpleTableCell.xib in Resources */,
 				EBF40DAD1CD4416600A64D8B /* background-clear.png in Resources */,
@@ -324,9 +342,11 @@
 				C9DBF3CC1CCF9D1900D3A952 /* RideInfoViewController.m in Sources */,
 				EBF40DA91CD4273800A64D8B /* DriverRegisterViewController.m in Sources */,
 				C9FE43C41CBFA8F6000F4A1B /* ViewController.m in Sources */,
+				EBF40DBB1CD44E0A00A64D8B /* SettingsViewController.m in Sources */,
 				EB46445C1CC8B002006C77EC /* SWRevealViewController.m in Sources */,
 				EB46445F1CC8B4EB006C77EC /* NavigationTableViewController.m in Sources */,
 				C9F36EF91CCF11A500EFFEA8 /* LoginViewController.m in Sources */,
+				EBF40DB81CD44DBE00A64D8B /* AboutViewController.m in Sources */,
 				C906655D1CCB17A0004817D1 /* TripViewController.m in Sources */,
 				C9DBF3D51CD0966C00D3A952 /* Annotation.m in Sources */,
 				C9DBF3D01CD06D1800D3A952 /* SimpleTableCell.m in Sources */,
