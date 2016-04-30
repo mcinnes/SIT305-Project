@@ -12,6 +12,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen568h.png" id="MRN-hM-RRh">
+                            <rect key="frame" x="0.0" y="292" width="600" height="312"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hidden" textLabel="VsO-Mg-Egg" style="IBUITableViewCellStyleDefault" id="IT4-sy-tGa">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -623,8 +627,11 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="passwordField" destination="q6e-gN-Jw4" id="fiL-Nc-Qg7"/>
-                        <outlet property="usernameField" destination="fOu-KU-u5Q" id="c5U-VB-xua"/>
+                        <outlet property="EmergencyContact" destination="8Pb-fR-mXi" id="Xji-q2-xBp"/>
+                        <outlet property="PhoneNumber" destination="URl-BG-VF0" id="Q3Z-6l-Zih"/>
+                        <outlet property="StudentID" destination="qnI-HB-3zL" id="Xrb-Bb-LSZ"/>
+                        <outlet property="passwordField" destination="q6e-gN-Jw4" id="MPt-bL-t0w"/>
+                        <outlet property="usernameField" destination="fOu-KU-u5Q" id="TmI-mn-vac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snV-OP-hgq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -732,6 +739,11 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="CarColour" destination="0Lw-2e-pTd" id="M49-F3-GM6"/>
+                        <outlet property="CarType" destination="AXe-TQ-Qle" id="9gP-km-fed"/>
+                        <outlet property="Coffee" destination="hpP-j7-AB9" id="tHx-OL-J50"/>
+                        <outlet property="LicenseNumber" destination="woj-aw-mpM" id="iQD-Vk-k6s"/>
+                        <outlet property="NumberPlate" destination="Nko-7b-qL1" id="NhI-eM-kde"/>
                         <outlet property="passwordField" destination="AXe-TQ-Qle" id="rsQ-ug-U9C"/>
                         <outlet property="usernameField" destination="0Lw-2e-pTd" id="esw-kB-KWM"/>
                     </connections>
@@ -742,6 +754,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SplashScreen568h.png" width="1825" height="3233"/>
         <image name="background-568h@2x.png" width="320" height="568"/>
         <image name="bg_picture" width="320" height="568"/>
         <image name="fb_login" width="320" height="568"/>

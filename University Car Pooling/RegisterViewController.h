@@ -10,4 +10,11 @@
 
 @interface RegisterViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UITextField *usernameField;
+@property (nonatomic, strong) IBOutlet UITextField *passwordField;
+@property (nonatomic, strong) IBOutlet UITextField *StudentID;
+@property (nonatomic, strong) IBOutlet UITextField *PhoneNumber;
+@property (nonatomic, strong) IBOutlet UITextField *EmergencyContact;
+
+
 @end

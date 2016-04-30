@@ -10,4 +10,10 @@
 
 @interface DriverRegisterViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UITextField *CarColour;
+@property (nonatomic, strong) IBOutlet UITextField *CarType;
+@property (nonatomic, strong) IBOutlet UITextField *NumberPlate;
+@property (nonatomic, strong) IBOutlet UITextField *LicenseNumber;
+@property (nonatomic, strong) IBOutlet UISwitch *Coffee;
+
 @end
