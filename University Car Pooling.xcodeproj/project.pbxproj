@@ -31,6 +31,7 @@
 		EBF40DA61CD4272E00A64D8B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF40DA51CD4272E00A64D8B /* RegisterViewController.m */; };
 		EBF40DA91CD4273800A64D8B /* DriverRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF40DA81CD4273800A64D8B /* DriverRegisterViewController.m */; };
 		EBF40DAB1CD4281500A64D8B /* background-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF40DAA1CD4281500A64D8B /* background-568h@2x.png */; };
+		EBF40DAD1CD4416600A64D8B /* background-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF40DAC1CD4416600A64D8B /* background-clear.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		EBF40DA71CD4273800A64D8B /* DriverRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverRegisterViewController.h; sourceTree = "<group>"; };
 		EBF40DA81CD4273800A64D8B /* DriverRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverRegisterViewController.m; sourceTree = "<group>"; };
 		EBF40DAA1CD4281500A64D8B /* background-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-568h@2x.png"; sourceTree = "<group>"; };
+		EBF40DAC1CD4416600A64D8B /* background-clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-clear.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		C9FE43B01CBFA8F6000F4A1B = {
 			isa = PBXGroup;
 			children = (
+				EBF40DAC1CD4416600A64D8B /* background-clear.png */,
 				EBF40DAA1CD4281500A64D8B /* background-568h@2x.png */,
 				EBF40D961CD1E69A00A64D8B /* SplashScreen568h@2x.png */,
 				C9FE43BB1CBFA8F6000F4A1B /* University Car Pooling */,
@@ -255,6 +258,7 @@
 				EBF40DAB1CD4281500A64D8B /* background-568h@2x.png in Resources */,
 				EB4644591CC8AE67006C77EC /* backgroundHolden.png in Resources */,
 				C9DBF3D11CD06D1800D3A952 /* SimpleTableCell.xib in Resources */,
+				EBF40DAD1CD4416600A64D8B /* background-clear.png in Resources */,
 				C9FE43CC1CBFA8F6000F4A1B /* LaunchScreen.storyboard in Resources */,
 				C9FE43C91CBFA8F6000F4A1B /* Assets.xcassets in Resources */,
 				EBF40D971CD1E69A00A64D8B /* SplashScreen568h@2x.png in Resources */,

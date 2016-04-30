@@ -30,6 +30,10 @@
     [super viewDidLoad];
     menu = @[@"first",@"second",@"third",@"forth",@"fifth"];
     
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background-568h@2x.png"]];
+    self.tableView.backgroundColor = background;
+    //[background release];
+    
 }
 
 - (void)didReceiveMemoryWarning {
