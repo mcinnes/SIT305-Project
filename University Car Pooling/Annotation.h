@@ -13,12 +13,12 @@
 #pragma mark -
 #pragma mark Memory management
 
-- (void)dealloc {
-    [self setTitle:nil];
-    [self setSubtitle:nil];
+- (void)setTitle:(NSString *)title {
     
 }
-
+- (void)setSubtitle:(NSString *)subtitle {
+    
+}
 
 
 @end
