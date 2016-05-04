@@ -27,6 +27,8 @@
 		EB4644591CC8AE67006C77EC /* backgroundHolden.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4644581CC8AE67006C77EC /* backgroundHolden.png */; };
 		EB46445C1CC8B002006C77EC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB46445B1CC8B002006C77EC /* SWRevealViewController.m */; };
 		EB46445F1CC8B4EB006C77EC /* NavigationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB46445E1CC8B4EB006C77EC /* NavigationTableViewController.m */; };
+		EBEAF6D51CDA057300A75CC2 /* OfferRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEAF6D41CDA057300A75CC2 /* OfferRideViewController.m */; };
+		EBEAF6D81CDA058000A75CC2 /* RequestRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEAF6D71CDA058000A75CC2 /* RequestRideViewController.m */; };
 		EBF40D971CD1E69A00A64D8B /* SplashScreen568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF40D961CD1E69A00A64D8B /* SplashScreen568h@2x.png */; };
 		EBF40DA61CD4272E00A64D8B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF40DA51CD4272E00A64D8B /* RegisterViewController.m */; };
 		EBF40DA91CD4273800A64D8B /* DriverRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF40DA81CD4273800A64D8B /* DriverRegisterViewController.m */; };
@@ -74,6 +76,10 @@
 		EB46445B1CC8B002006C77EC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EB46445D1CC8B4EB006C77EC /* NavigationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTableViewController.h; sourceTree = "<group>"; };
 		EB46445E1CC8B4EB006C77EC /* NavigationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTableViewController.m; sourceTree = "<group>"; };
+		EBEAF6D31CDA057300A75CC2 /* OfferRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferRideViewController.h; sourceTree = "<group>"; };
+		EBEAF6D41CDA057300A75CC2 /* OfferRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferRideViewController.m; sourceTree = "<group>"; };
+		EBEAF6D61CDA058000A75CC2 /* RequestRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestRideViewController.h; sourceTree = "<group>"; };
+		EBEAF6D71CDA058000A75CC2 /* RequestRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestRideViewController.m; sourceTree = "<group>"; };
 		EBF40D961CD1E69A00A64D8B /* SplashScreen568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen568h@2x.png"; sourceTree = "<group>"; };
 		EBF40DA41CD4272E00A64D8B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		EBF40DA51CD4272E00A64D8B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
@@ -167,6 +173,10 @@
 				C9DBF3C81CCF995500D3A952 /* RequestedRidesViewController.m */,
 				C9DBF3CA1CCF9D1900D3A952 /* RideInfoViewController.h */,
 				C9DBF3CB1CCF9D1900D3A952 /* RideInfoViewController.m */,
+				EBEAF6D31CDA057300A75CC2 /* OfferRideViewController.h */,
+				EBEAF6D41CDA057300A75CC2 /* OfferRideViewController.m */,
+				EBEAF6D61CDA058000A75CC2 /* RequestRideViewController.h */,
+				EBEAF6D71CDA058000A75CC2 /* RequestRideViewController.m */,
 				C9DBF3D31CD0966C00D3A952 /* Annotation.h */,
 				C9DBF3D41CD0966C00D3A952 /* Annotation.m */,
 				C9FE43BF1CBFA8F6000F4A1B /* AppDelegate.h */,
@@ -349,11 +359,13 @@
 				EBF40DB81CD44DBE00A64D8B /* AboutViewController.m in Sources */,
 				C906655D1CCB17A0004817D1 /* TripViewController.m in Sources */,
 				C9DBF3D51CD0966C00D3A952 /* Annotation.m in Sources */,
+				EBEAF6D51CDA057300A75CC2 /* OfferRideViewController.m in Sources */,
 				C9DBF3D01CD06D1800D3A952 /* SimpleTableCell.m in Sources */,
 				C9FE43C11CBFA8F6000F4A1B /* AppDelegate.m in Sources */,
 				EBF40DA61CD4272E00A64D8B /* RegisterViewController.m in Sources */,
 				C90665611CCBABE9004817D1 /* LocationService.m in Sources */,
 				C9DBF3C91CCF995500D3A952 /* RequestedRidesViewController.m in Sources */,
+				EBEAF6D81CDA058000A75CC2 /* RequestRideViewController.m in Sources */,
 				C9FE43BE1CBFA8F6000F4A1B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
