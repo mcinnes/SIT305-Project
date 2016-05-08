@@ -33,5 +33,6 @@
 
 - (void)startUpdatingLocation;
 - (void)requestUse;
+-(CLLocation *)getCurrentLocation;
 
 @end

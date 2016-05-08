@@ -95,8 +95,8 @@
     }
     
     // Configure the cell
-    cell.textLabel.text = [object objectForKey:@"location"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Priority: %@", [object objectForKey:@"destinationDescription"]];
+    cell.textLabel.text = [object objectForKey:@"destinationDescription"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"From: %@", [object objectForKey:@"location"]];
     
     return cell;
 }

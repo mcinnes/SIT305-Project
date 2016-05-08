@@ -13,8 +13,8 @@
 @end
 
 @implementation OfferRideViewController{
-    
-    -(IBAction)save:(id)sender {
+}
+-(IBAction)save:(id)sender {
         
         // Save Latitude Longtitude String
         NSString *saveString = latitude_Longtitude.text;
@@ -36,7 +36,7 @@
         
     }
     
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

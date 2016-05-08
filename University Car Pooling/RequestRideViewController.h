@@ -7,16 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LocationService.h"
 @interface RequestRideViewController : UIViewController{
     
     IBOutlet UITextField *latitude_Longtitude;
     IBOutlet UITextField *LocationDescription;
     IBOutlet UITextField *Location;
     
-    
 }
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 -(IBAction)save:(id)sender;
+@property (nonatomic, strong) LocationService *locationService;
 
 @end

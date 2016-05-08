@@ -44,6 +44,13 @@
 -(void)beginTracking{
     
 }
+
+-(CLLocation *)getCurrentLocation{
+    
+    _currentLocation = [[CLLocation alloc]  initWithLatitude:self.locationManager.location.coordinate.latitude longitude:self.locationManager.location.coordinate.longitude];
+    
+    return _currentLocation;
+}
 - (void)startUpdatingLocation
 {
     NSLog(@"Starting location updates");

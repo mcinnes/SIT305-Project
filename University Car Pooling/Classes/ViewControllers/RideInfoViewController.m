@@ -23,13 +23,16 @@
     //MapView
     PFGeoPoint *tempGeo = ride[@"destination"];
     
-    CLLocationCoordinate2D annotationCoordinate = CLLocationCoordinate2DMake(tempGeo.latitude, tempGeo.longitude);
-    MapAnnotation *annotation = [[MapAnnotation alloc] init];
-    annotation.coordinate = annotationCoordinate;
-    //        annotation.title = location[@"Name"];
-    //        annotation.subtitle = location[@"Place"];
-    [self.mapView addAnnotation:annotation];
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(tempGeo.latitude, tempGeo.longitude);
     
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.1, 0.1);
+    MKCoordinateRegion region = {coord, span};
+    
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    [annotation setCoordinate:coord];
+    
+    [self.mapView setRegion:region];
+    [self.mapView addAnnotation:annotation];
     // Do any additional setup after loading the view.
 }
 
