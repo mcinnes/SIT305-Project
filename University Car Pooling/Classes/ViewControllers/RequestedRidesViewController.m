@@ -25,6 +25,7 @@
         // Custom the table
         
         self.parseClassName = @"currentlyLooking";
+        
         self.textKey = @"destination";
 
         // The title for this table in the Navigation Controller.
@@ -44,16 +45,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view.
 }
 
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:@"currentlyLooking"];
-    
+   // [query whereKey:@"accepted" notEqualTo:@"Yes"];
     // If Pull To Refresh is enabled, query against the network by default.
     if (self.pullToRefreshEnabled) {
-        query.cachePolicy = kPFCachePolicyNetworkOnly;
+        query.cachePolicy = kPFCachePolicyNetworkElseCache;
     }
     
     if (self.objects.count == 0) {

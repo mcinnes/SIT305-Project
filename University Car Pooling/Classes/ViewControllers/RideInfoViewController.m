@@ -42,7 +42,40 @@
 }
 - (IBAction)acceptRide:(id)sender {
     
+    ride[@"accepted"] = @"Yes";
+    ride[@"acceptedBy"] = [[PFUser currentUser]objectId];
+    [ride saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [self getDriverDetails];
+        } else {
+            // There was a problem, check error.description
+            NSLog(@"%@", error);
+        }
+    }];
+    
 }
 
+//FIX
+
+-(void)getDriverDetails{
+    
+    PFQuery *query = [PFUser query];
+    [query whereKey:@"objectId" equalTo:ride[@"userID"]];
+    PFUser *driver = [query getFirstObject];
+    NSLog(@"Driver %@", driver);
+
+    _driverNameLabel.text = driver[@"Name"];
+    
+    NSLog(@"DriverID %@", driver[@"driverID"]);
+
+    PFQuery *driverDetailsQuery = [PFQuery queryWithClassName:@"Driver"];
+    [query whereKey:@"objectId" equalTo:driver[@"driverID"]];
+    PFObject *driverDetails = [driverDetailsQuery getFirstObject];
+    NSLog(@"Driver2 %@", driverDetails);
+
+    _carNumberPlateLabel.text = driverDetails[@"licensePlate"];
+    _carTypeLabel.text = driverDetails[@"carType"];
+    
+}
 
 @end

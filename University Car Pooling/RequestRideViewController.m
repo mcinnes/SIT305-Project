@@ -7,8 +7,8 @@
 //
 
 #import "RequestRideViewController.h"
-#import "LocationService.h"
 #import <Parse/Parse.h>
+
 @interface RequestRideViewController () {
     NSString *locationString;
     CLLocationCoordinate2D locCoord;
@@ -21,9 +21,6 @@
 //
 //
 //
-
-
-
 @end
 
 @implementation RequestRideViewController
@@ -32,10 +29,11 @@
     
     PFGeoPoint *locationPoint = [PFGeoPoint geoPointWithLatitude:locCoord.latitude longitude:locCoord.longitude];
     
-    PFObject *ride = [PFObject objectWithClassName:@"GameScore"];
+    PFObject *ride = [PFObject objectWithClassName:@"currentyLooking"];
     ride[@"location"] = locationPoint;
     ride[@"destinationDescription"] = LocationDescription.text;
     ride[@"location"] = Location.text;
+    ride[@"userID"] = [[PFUser currentUser]objectId];
     [ride saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             // The object has been saved.
@@ -44,25 +42,58 @@
         }
     }];
     
+    [PFUser currentUser][@"requested"] = @"requested";
+    [PFUser currentUser][@"rideID"] = ride.objectId;
+    [[PFUser currentUser] saveInBackground];
     
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Your ride has been posted" message:@"Please wait for confirmation" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:@"OK"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                             
+                         }];
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
+    //[self viewDidAppear];
+    //[self presentViewController:alert animated:YES completion:nil];
     
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+ //   UIBarButtonItem *zoomButton = [[UIBarButtonItem alloc] initWithTitle:@"Zoom" style:UIBa target:self action:@selector(zoom)];
     
+    //[self search];
+    self.locationService = [LocationService new];
+
+    [self.locationService startUpdatingLocation];
+    
+    self.mapView.showsUserLocation = true;
+    [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate animated:YES];
+
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
     [self.mapView addGestureRecognizer:longPressGesture];
     
-    uniNames = @[@"Deakin", @"Monash", @"Swinburn"];
+    
+    uniNames = @[@"Monash", @"Deakin"];
+    
     CLLocation *deakin = [[CLLocation alloc]  initWithLatitude:-37.914002 longitude:145.2653463];
-    uniLocations = @[deakin];
+    CLLocation *monash = [[CLLocation alloc]  initWithLatitude:-37.912249 longitude:145.1330203];
 
-    self.locationService = [LocationService new];
+    uniLocations = @[monash, deakin];
+
+    
+    NSLog(@"UNI %@", [self currentLocationDescription:deakin]);
     
    // Location.text = [self currentLocationDescription:self.locationService.getCurrentLocation];
     
-    
+    NSLog(@"%@", self.locationService.getCurrentLocation);
+    Location.text = [self currentLocationDescription:self.locationService.getCurrentLocation];
     // Do any additional setup after loading the view.
 }
 
@@ -70,23 +101,37 @@
     [self.mapView setRegion:MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(.0005, .0005)) animated:YES];
 }
 
+-(void)zoom{
+    CGRect newFrame = self.mapView.frame;
+    
+    newFrame.size.width = 200;
+    newFrame.size.height = 900;
+    [self.mapView setFrame:newFrame];
+}
+
+
 -(void)handleLongPressGesture:(UIGestureRecognizer*)sender {
     // This is important if you only want to receive one tap and hold event
     if (sender.state == UIGestureRecognizerStateEnded)
     {
-        [self.mapView removeGestureRecognizer:sender];
+        //[self.mapView removeGestureRecognizer:sender];
     }
     else
     {
+        //Clear previous annotation
+        [self.mapView removeAnnotations:self.mapView.annotations];
+        
         // Here we get the CGPoint for the touch and convert it to latitude and longitude coordinates to display on the map
         CGPoint point = [sender locationInView:self.mapView];
        locCoord = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
         // Then all you have to do is create the annotation and add it to the map
-       // YourAnnotation *dropPin = [[YourAnnotation alloc] init];
-        //dropPin.latitude = [NSNumber numberWithDouble:locCoord.latitude];
-        //dropPin.longitude = [NSNumber numberWithDouble:locCoord.longitude];
-        //[self.mapView addAnnotation:dropPin];
-       locationString=[[NSString alloc] initWithFormat:@"%f,%f",locCoord.latitude,locCoord.longitude];
+       
+        MKPointAnnotation *pinPoint = [[MKPointAnnotation alloc] init];
+        pinPoint.coordinate = locCoord;
+        pinPoint.title = @"Destination";
+        [self.mapView addAnnotation:pinPoint];
+        
+        locationString=[[NSString alloc] initWithFormat:@"%f,%f",locCoord.latitude,locCoord.longitude];
         NSLog(@"%@",locationString);
         latitude_Longtitude.text = locationString;
         //NSLog(@"%@", locCoord);
@@ -97,28 +142,67 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)zoomMap{
+    //make map full screen
+}
 - (NSString *)currentLocationDescription:(CLLocation*)location {
     
-    NSString *result = nil;
-
-    for (CLLocation *location in uniLocations) {
-        if ([location distanceFromLocation:location] < 3) {
-            result = uniLocations[0];
-            break;
-        }
-    }
+    NSString __block *result = nil;
+   // NSUInteger count = 0;
+    
+    //for (CLLocation *location in uniLocations) {
+        
+        //if ([location distanceFromLocation:location] < 3) {
+         //   result = uniNames[count];
+        //}
+        //else {
+         //   NSLog(@"Cant find it motherfucker");
+       // }
+     //   count++;
+   // }
+    
+    [uniLocations
+     enumerateObjectsUsingBlock:
+     ^(CLLocation *locations, NSUInteger index, BOOL *stop)
+     {
+         NSLog(@"%@", location);
+         if ([locations distanceFromLocation:location] <= 3) {
+             NSLog(@"Uninames index%@", uniNames[index]);
+             result = uniNames[index];
+         }
+         else {
+             NSLog(@"Cant find uni");
+         }     }];
     
     return result;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)descriptionSearch:(id)sender {
+    NSLog(@"%@", latitude_Longtitude.text);
+//if (latitude_Longtitude.text == nil) {
+        [self search:LocationDescription.text];
+  //  }
 }
-*/
+
+-(void)search:(NSString *)searchTerm{
+    // Create and initialize a search request object.
+    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+    request.naturalLanguageQuery = searchTerm;
+    request.region = self.mapView.region;
+    
+    // Create and initialize a search object.
+    MKLocalSearch *search = [[MKLocalSearch alloc] initWithRequest:request];
+    
+    // Start the search and display the results as annotations on the map.
+    [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error)
+    {
+        NSMutableArray *placemarks = [NSMutableArray array];
+        for (MKMapItem *item in response.mapItems) {
+            [placemarks addObject:item.placemark];
+        }
+        [self.mapView removeAnnotations:[self.mapView annotations]];
+        [self.mapView showAnnotations:placemarks animated:NO];
+    }];
+}
 
 @end

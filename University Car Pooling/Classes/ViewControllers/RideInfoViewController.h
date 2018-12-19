@@ -19,5 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *acceptButton;
 @property (weak, nonatomic) IBOutlet UILabel *destinationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *meetingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *driverNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carNumberPlateLabel;
 
 @end

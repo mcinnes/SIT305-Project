@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "LocationService.h"
+#import <MessageUI/MessageUI.h>
+#import "SWRevealViewController.h"
+#import <Parse/Parse.h>
 
-@interface TripViewController : UIViewController <MKMapViewDelegate> {
+@interface TripViewController : UIViewController <MKMapViewDelegate, MFMessageComposeViewControllerDelegate> {
 
 }
 
@@ -23,6 +26,8 @@
 @property (nonatomic, strong, readonly) MKPolyline *routePolyline;
 
 @property (nonatomic, readonly) MKCoordinateRegion routeRegion;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
 
 
 @end

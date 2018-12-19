@@ -20,9 +20,17 @@ static CGFloat const kRegionPaddingMultiplier = 1.33;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.locationService = [LocationService new];
     
-    [self.mapView addOverlay:self.routePolyline];
+    _barButton.target = self.revealViewController;
+    _barButton.action = @selector(revealToggle:);
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    [self actionSheet];
+    self.locationService = [LocationService new];
+    [self.locationService startUpdatingLocation];
+    
+   // [self.mapView addOverlay:self.routePolyline];
     [self.mapView setRegion:self.routeRegion animated:YES];
     
 }
@@ -59,5 +67,40 @@ static CGFloat const kRegionPaddingMultiplier = 1.33;
     
     _routePolyline = [MKPolyline polylineWithCoordinates:coords count:locationsCount];
 }
+-(void)actionSheet{
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"My options"
+                                                                   message:@""
+                                                            preferredStyle:UIAlertControllerStyleActionSheet]; // 1
+    UIAlertAction *firstAction = [UIAlertAction actionWithTitle:@"Send my location"
+                                                          style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                                                              NSLog(@"You pressed button one");
+                                                              //[self sendSMS];
+                                                              [self.mapView addOverlay:self.routePolyline];
 
+                                                          }]; //
+    
+    UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"View Driver Information"
+                                                           style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                                                               NSLog(@"You pressed button two");
+                                                               
+                                                           }]; // 3
+    [alert addAction:firstAction];
+    [alert addAction:secondAction];
+    [self presentViewController:alert animated:YES completion:nil]; // 6
+
+}
+-(void)sendSMS{
+    
+    NSString *emergencyContact = [PFUser currentUser][@"emergencyContact"];
+    
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+    if([MFMessageComposeViewController canSendText])
+    {
+        controller.body = @"Hello from Mugunth";
+        controller.recipients = [NSArray arrayWithObjects:emergencyContact, nil];
+        controller.messageComposeDelegate = self;
+        [self presentModalViewController:controller animated:YES];
+    }
+}
 @end

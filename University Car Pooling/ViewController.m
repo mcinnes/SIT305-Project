@@ -20,18 +20,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+   // [self presentOnboardSetup];
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if (![defaults objectForKey:@"firstRunCompleted"]) {
         [self presentOnboardSetup];
     }
-   // [PFUser logOut];
+    
+   //[PFUser logOut];
+    
+    
     if (![PFUser currentUser]) {
         [self.navigationController performSegueWithIdentifier:@"login" sender:self];
     } else {
         NSLog(@"%@", [PFUser currentUser]);
     }
+    
     _barButton.target = self.revealViewController;
     _barButton.action = @selector(revealToggle:);
     
@@ -67,7 +72,6 @@
     OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"Allow Push Notifications" body:@"We use push notifications to alert you when a ride has been found." image:[UIImage imageNamed:@"icon"] buttonText:@"Allow Push Notifications" action:^{
         
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
-        
         
     }];
     

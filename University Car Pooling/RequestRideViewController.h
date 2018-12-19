@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "LocationService.h"
-@interface RequestRideViewController : UIViewController{
+#import <MapKit/MapKit.h>
+@interface RequestRideViewController : UIViewController <MKMapViewDelegate> {
     
     IBOutlet UITextField *latitude_Longtitude;
     IBOutlet UITextField *LocationDescription;
